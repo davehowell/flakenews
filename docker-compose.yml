@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  wait:
+    image: dokku/wait
+  sql.data:
+    container_name: flakenews_sql
+    build:
+      context: ./mssql_docker
+      dockerfile: Dockerfile
+    environment:
+      - SA_PASSWORD=${FN_SQL_PASSWORD}
+      - ACCEPT_EULA=Y
+    ports:
+      - 1433:1433
+  localstack:
+    container_name: flakenews_s3
+    image: localstack/localstack
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=s3
+      - DEBUG=1
+      - DATA_DIR=/tmp/localstack/data
+    volumes:
+      - ./tmp/localstack:/tmp/localstack   
+      - /var/run/docker.sock:/var/run/docker.sock

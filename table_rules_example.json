@@ -1,0 +1,135 @@
+{
+    "databases": [
+      {
+        "name": "demodata",
+        "schemas": [
+          {
+            "name": "dbo",
+            "tables": [
+              {
+                "name": "bulk_data",
+                "cols": [
+                  {
+                    "name": "id",
+                    "ordinal_position": 1,
+                    "data_type": "int",
+                    "numeric_precision": 10,
+                    "numeric_scale": 0
+                  },
+                  {
+                    "name": "healthcare",
+                    "ordinal_position": 2,
+                    "data_type": "nvarchar",
+                    "numeric_precision": null,
+                    "numeric_scale": null
+                  },
+                  {
+                    "name": "email",
+                    "ordinal_position": 3,
+                    "data_type": "nvarchar",
+                    "numeric_precision": null,
+                    "numeric_scale": null
+                  },
+                  {
+                    "name": "btc",
+                    "ordinal_position": 4,
+                    "data_type": "nvarchar",
+                    "numeric_precision": null,
+                    "numeric_scale": null
+                  },
+                  {
+                    "name": "mandarin",
+                    "ordinal_position": 5,
+                    "data_type": "nvarchar",
+                    "numeric_precision": null,
+                    "numeric_scale": null
+                  },
+                  {
+                    "name": "uri",
+                    "ordinal_position": 6,
+                    "data_type": "nvarchar",
+                    "numeric_precision": null,
+                    "numeric_scale": null
+                  },
+                  {
+                    "name": "truthiness",
+                    "ordinal_position": 7,
+                    "data_type": "nvarchar",
+                    "numeric_precision": null,
+                    "numeric_scale": null
+                  },
+                  {
+                    "name": "quantity",
+                    "ordinal_position": 8,
+                    "data_type": "int",
+                    "numeric_precision": 10,
+                    "numeric_scale": 0
+                  },
+                  {
+                    "name": "mass",
+                    "ordinal_position": 9,
+                    "data_type": "float",
+                    "numeric_precision": 53,
+                    "numeric_scale": null
+                  },
+                  {
+                    "name": "faked_at",
+                    "ordinal_position": 10,
+                    "data_type": "datetime",
+                    "numeric_precision": null,
+                    "numeric_scale": null
+                  }
+                ],
+                "pk": [],
+                "row_split_size": 500000,
+                "sf_ddl": "create or replace table bulk_data (\n    id number\n    , healthcare varchar\n    , email varchar\n    , btc varchar\n    , mandarin varchar\n    , uri varchar\n    , truthiness varchar\n    , quantity number\n    , mass float\n    , faked_at timestamp\n);"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "alternate",
+        "schemas": [
+          {
+            "name": "dbo",
+            "tables": [
+              {
+                "name": "hey",
+                "cols": [
+                  {
+                    "name": "col1",
+                    "ordinal_position": 1,
+                    "data_type": "int",
+                    "numeric_precision": 10,
+                    "numeric_scale": 0
+                  },
+                  {
+                    "name": "col2",
+                    "ordinal_position": 2,
+                    "data_type": "int",
+                    "numeric_precision": 10,
+                    "numeric_scale": 0
+                  },
+                  {
+                    "name": "col3",
+                    "ordinal_position": 3,
+                    "data_type": "int",
+                    "numeric_precision": 10,
+                    "numeric_scale": 0
+                  }
+                ],
+                "pk": [
+                  "col1",
+                  "col2",
+                  "col3"
+                ],
+                "row_split_size": 500000,
+                "sf_ddl": "create or replace table hey (\n    col1 number\n    , col2 number\n    , col3 number\n);"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

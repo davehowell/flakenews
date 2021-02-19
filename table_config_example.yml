@@ -1,0 +1,15 @@
+version: 2
+
+databases:
+  - name: demodata
+    schemas:
+      - name: dbo
+        tables:
+          - name: bulk_data
+         #- name: another_table_in_same_schema
+     #- name: another_schema_in_same_database
+  - name: alternate
+    schemas:
+      - name: dbo
+        tables:
+          - name: hey

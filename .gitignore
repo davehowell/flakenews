@@ -1,0 +1,9 @@
+.DS_Store
+.vscode/
+tmp/
+temp/
+.venv/
+.envrc
+.env.ps1
+**/__pycache__
+.mypy_cache
